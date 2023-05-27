@@ -2,6 +2,13 @@
 
 /*Estilo para a página principal usando o  mobile first*/
 
+/*Paleta d0 projeto = Monocromática simples
+     #fff
+     #8c8c8ca1
+     #4D4D4D
+     #333333
+     */
+
 :root {
     --cor-00: #fff;
     --cor-01: #8c8c8ca1;
@@ -37,10 +44,13 @@ div#conteiner > section#login {
     position: absolute;
     left: 50%;
     top: 50%;
+    transition: width.3s, height.3s;
+    transition-timing-function: ease-in;
     transform: translate(-50%,-50%);
 }
 
 div#conteiner > section#login > div#imagem {
+    background: #000;
     height: 250px;
     background-image: url(../pictures/pattern.jpg);
     background-position: center center;
@@ -83,13 +93,49 @@ div#conteiner > section#login > div#formulario > form > div.campo > input {
     height: 36px;
     width: calc(100% - 46px);
     border-radius: 5px;
-    transform: translateY(-12px);
+    background-color: #d3d3d3ef;
+    transform: translateY(-13px);
 }
 
 
+div#conteiner > section#login > div#formulario > form > div.campo > input:focus-within {
+    background-color: #fff;
+}
+
 div#conteiner > section#login > div#formulario > form > input[type=submit] {
-    margin: 0px auto;
+    margin: 0px auto 5px;
     display: block;
-    width: 96%;
-    height: 36px;
+    width: 98.5%;
+    height: 40px;
+    border-radius: 5px;
+}
+
+div#conteiner > section#login > div#formulario > form > input[type=submit]:hover {
+    background-color: #8c8c8ca1;
+    color: #000;
+    border: 1px solid #000;
+
+    transition: 1.2s;
+    transition-timing-function: ease;
+}
+
+
+div#conteiner > section#login > div#formulario > form > a#botao {
+    text-decoration: none;
+    display: block;
+    width: 98.5%;
+    text-align: center;
+    background-color: #8c8c8ca1;
+    margin: 0px auto;
+    height: 40px;
+    border-radius: 5px;
+    color: #000000;
+    border: 1px solid #000;
+}
+
+div#conteiner > section#login > div#formulario > form > a#botao:hover {
+    background-color: #fff;
+
+    transition: 1.2s;
+    transition-timing-function: ease;
 }
